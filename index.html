@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cafeteria Miami Menu</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+    }
+    img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <img id="slide" src="menu-01-breakfast.png">
+
+  <script>
+    const slides = [
+      "menu-01-breakfast.png",
+      "menu-02-lunch.png",
+      "menu-03-specials.png"
+    ];
+
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      document.getElementById("slide").src = slides[index];
+    }, 8000); // 8 seconds per slide
+  </script>
+</body>
+</html>
